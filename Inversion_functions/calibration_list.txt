@@ -1,0 +1,2 @@
+Calibration name	Maximum fit radius	Interpolate r=0-4	Fitting equation [f(r)]
+Example cali	162	False	5E-4 * r**2

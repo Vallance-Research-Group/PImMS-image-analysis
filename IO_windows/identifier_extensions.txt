@@ -1,0 +1,10 @@
+defaultExtensionToF	ToF_t
+defaultExtensionMz	ToF_mz
+defaultExtensionIonIm	ion_im
+defaultExtensionSymIm	sym_im
+defaultExtensionInvIm	inv_im
+defaultExtensionRadDist	rad_dist
+defaultExtensionVelDist	vel_dist
+defaultExtensionMomDist	mom_dist
+defaultExtensionEDist	E_dist
+defaultExtensionBetaDist	beta_dist

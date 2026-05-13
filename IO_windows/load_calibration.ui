@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>loadCalibrationForm</class>
+ <widget class="QWidget" name="loadCalibrationForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Load Calibration</string>
+  </property>
+  <widget class="QTableWidget" name="calibrationTable">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>19</y>
+     <width>460</width>
+     <height>331</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>460</width>
+     <height>331</height>
+    </size>
+   </property>
+   <property name="selectionMode">
+    <enum>QAbstractItemView::SingleSelection</enum>
+   </property>
+   <property name="selectionBehavior">
+    <enum>QAbstractItemView::SelectRows</enum>
+   </property>
+   <attribute name="horizontalHeaderMinimumSectionSize">
+    <number>45</number>
+   </attribute>
+   <attribute name="horizontalHeaderDefaultSectionSize">
+    <number>125</number>
+   </attribute>
+   <attribute name="verticalHeaderVisible">
+    <bool>false</bool>
+   </attribute>
+   <column>
+    <property name="text">
+     <string>Calibration name</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Maximum fit radius</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Interpolate r=0-4</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Fitting equation [f(r)]</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QPushButton" name="loadCalibration">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>360</y>
+     <width>120</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Load calibration</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="addCalibration">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>360</y>
+     <width>120</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Add calibration</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

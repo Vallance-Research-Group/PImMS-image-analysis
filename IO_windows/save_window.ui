@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Save all</string>
+  </property>
+  <widget class="QCheckBox" name="saveToF">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>100</y>
+     <width>91</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>ToF (x axis: t)</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="saveMzToF">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>128</y>
+     <width>114</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>ToF (x axis: m / z)</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="saveIonImage">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>170</y>
+     <width>76</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Ion image</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="saveSymmetrisedImage">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>210</y>
+     <width>128</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Symmetrised image</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="saveInvertedImage">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>240</y>
+     <width>102</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Inverted image</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="saveBetaDist">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>390</y>
+     <width>110</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Beta distribution</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="defaultExtensionToF">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>100</y>
+     <width>124</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="defaultExtensionMz">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>128</y>
+     <width>124</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="defaultExtensionIonIm">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>170</y>
+     <width>124</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="defaultExtensionSymIm">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>210</y>
+     <width>124</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="defaultExtensionInvIm">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>240</y>
+     <width>124</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="defaultExtensionRadDist">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>270</y>
+     <width>124</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="defaultExtensionBetaDist">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>390</y>
+     <width>124</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>80</y>
+     <width>81</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>File identifier</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="saveSelected">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>250</y>
+     <width>101</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton::pressed{
+background-color: rgb(0, 170, 0);
+border: None;
+}</string>
+   </property>
+   <property name="text">
+    <string>Save selected</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="saveAll">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>220</y>
+     <width>101</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton::pressed{
+background-color: rgb(0, 170, 0);
+border: None;
+}</string>
+   </property>
+   <property name="text">
+    <string>Save all</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>80</y>
+     <width>271</width>
+     <height>341</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textEdit">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>180</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="0">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="0">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled/>
+    </palette>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+   <property name="html">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Using parameters from main window&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="plainTextEdit">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>440</y>
+     <width>481</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="0">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="0">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled/>
+    </palette>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+   <property name="plainText">
+    <string>File name is {base file name}_{file identifier}.dat}. Default file identifier is read from file.</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkSaveParameters">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>290</y>
+     <width>121</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Save parameters</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="saveRadialDist">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>270</y>
+     <width>119</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Radial distribution</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>481</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="minimumSize">
+       <size>
+        <width>80</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Output folder:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="outputFolder"/>
+    </item>
+    <item>
+     <widget class="QToolButton" name="getOutputFolder">
+      <property name="text">
+       <string>...</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>40</y>
+     <width>451</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QLabel" name="label_3">
+      <property name="minimumSize">
+       <size>
+        <width>80</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Base file name:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="baseFileName"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLineEdit" name="defaultExtensionVelDist">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>300</y>
+     <width>124</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="saveVelocityDist">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>300</y>
+     <width>119</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Velocity dist.</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="defaultExtensionMomDist">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>330</y>
+     <width>124</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="saveMomentumDist">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>330</y>
+     <width>119</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Momentum dist.</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="defaultExtensionEDist">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>360</y>
+     <width>124</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="saveEnergyDist">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>360</y>
+     <width>119</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Energy distribution</string>
+   </property>
+  </widget>
+  <zorder>frame</zorder>
+  <zorder>saveToF</zorder>
+  <zorder>saveMzToF</zorder>
+  <zorder>saveIonImage</zorder>
+  <zorder>saveSymmetrisedImage</zorder>
+  <zorder>saveInvertedImage</zorder>
+  <zorder>saveBetaDist</zorder>
+  <zorder>defaultExtensionToF</zorder>
+  <zorder>defaultExtensionMz</zorder>
+  <zorder>defaultExtensionIonIm</zorder>
+  <zorder>defaultExtensionSymIm</zorder>
+  <zorder>defaultExtensionInvIm</zorder>
+  <zorder>defaultExtensionRadDist</zorder>
+  <zorder>defaultExtensionBetaDist</zorder>
+  <zorder>label_2</zorder>
+  <zorder>saveSelected</zorder>
+  <zorder>saveAll</zorder>
+  <zorder>textEdit</zorder>
+  <zorder>plainTextEdit</zorder>
+  <zorder>checkSaveParameters</zorder>
+  <zorder>saveRadialDist</zorder>
+  <zorder>layoutWidget</zorder>
+  <zorder>layoutWidget</zorder>
+  <zorder>defaultExtensionVelDist</zorder>
+  <zorder>saveVelocityDist</zorder>
+  <zorder>defaultExtensionMomDist</zorder>
+  <zorder>saveMomentumDist</zorder>
+  <zorder>defaultExtensionEDist</zorder>
+  <zorder>saveEnergyDist</zorder>
+ </widget>
+ <tabstops>
+  <tabstop>outputFolder</tabstop>
+  <tabstop>getOutputFolder</tabstop>
+  <tabstop>baseFileName</tabstop>
+  <tabstop>saveToF</tabstop>
+  <tabstop>defaultExtensionToF</tabstop>
+  <tabstop>saveMzToF</tabstop>
+  <tabstop>defaultExtensionMz</tabstop>
+  <tabstop>saveIonImage</tabstop>
+  <tabstop>defaultExtensionIonIm</tabstop>
+  <tabstop>saveSymmetrisedImage</tabstop>
+  <tabstop>defaultExtensionSymIm</tabstop>
+  <tabstop>saveInvertedImage</tabstop>
+  <tabstop>defaultExtensionInvIm</tabstop>
+  <tabstop>saveRadialDist</tabstop>
+  <tabstop>defaultExtensionRadDist</tabstop>
+  <tabstop>saveVelocityDist</tabstop>
+  <tabstop>defaultExtensionVelDist</tabstop>
+  <tabstop>saveMomentumDist</tabstop>
+  <tabstop>defaultExtensionMomDist</tabstop>
+  <tabstop>saveEnergyDist</tabstop>
+  <tabstop>defaultExtensionEDist</tabstop>
+  <tabstop>saveBetaDist</tabstop>
+  <tabstop>defaultExtensionBetaDist</tabstop>
+  <tabstop>saveAll</tabstop>
+  <tabstop>saveSelected</tabstop>
+  <tabstop>checkSaveParameters</tabstop>
+  <tabstop>textEdit</tabstop>
+  <tabstop>plainTextEdit</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

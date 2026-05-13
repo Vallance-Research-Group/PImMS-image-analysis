@@ -1,0 +1,9 @@
+pimmsread
+numpy
+numba
+scipy
+PyQt6
+pyqtgraph
+pbasex
+pyabel
+h5py
