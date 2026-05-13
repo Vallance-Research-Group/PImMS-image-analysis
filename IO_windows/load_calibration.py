@@ -1,6 +1,7 @@
 from PyQt6 import QtWidgets, uic
 import os
 import sys
+from shutil import copyfile
 try:
     from IO_windows.add_calibration import add_calibration
 except ModuleNotFoundError:
@@ -18,8 +19,12 @@ class load_calibration(QtWidgets.QDialog):
         delegate = StyledItemDelegate(self.calibrationTable)
         self.calibrationTable.setItemDelegate(delegate)
 
-        # Populate the calibration table
         self.cali_path = os.path.join(os.path.dirname(__file__), '..', 'Inversion_functions', 'calibration_list.txt')
+        # Check the calibration list has been initialised
+        if not os.path.exists(self.cali_path):
+            copyfile(os.path.join(os.path.dirname(__file__), '..', 'Inversion_functions', 'calibration_list_template.txt'), self.cali_path)
+
+        # Populate the calibration table
         self.populate_table()
 
         # Initialise the connections
